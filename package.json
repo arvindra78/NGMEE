@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "description": "NGMEE - Next Gen Media Extraction Engine",
   "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
-    "setup": "npm install && cd client && npm install && cd ../server && npm install",
-    "build": "npm install && cd client && npm install && npm run build && cd ../server && npm install",
-    "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
-    "start-server": "cd server && npm start",
-    "start-client": "cd client && npm run dev",
-    "serve": "cd server && cross-env NODE_ENV=production node server.js"
+    "build": "npm install && npm run build --workspace=client",
+    "start": "concurrently \"npm run start --workspace=server\" \"npm run dev --workspace=client\"",
+    "serve": "cross-env NODE_ENV=production node server/server.js"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
-    "cross-env": "^7.0.3"
+    "concurrently": "^8.2.2"
   }
 }
