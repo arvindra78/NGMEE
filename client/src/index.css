@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nova-bg: #050505;
+  --color-nova-cyan: #00f2ff;
+  --color-nova-purple: #bc13fe;
+  --color-nova-blue: #1e40af;
+  
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  
+  --blur-xs: 2px;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-nova-bg text-white overflow-x-hidden min-h-screen font-sans;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(188, 19, 254, 0.2);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(30, 64, 175, 0.2);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a2a;
+}
