@@ -19,23 +19,19 @@ NGMEE is a premium, futuristic media downloader web application with a glassmorp
 ### Prerequisites
 - Node.js (v18 or higher)
 - Python (required for `yt-dlp`)
-- `yt-dlp` should be available in your system path (or handled by `yt-dlp-exec`).
+- `yt-dlp` is handled by the engine.
 
-### 1. Backend Setup
-```bash
-cd server
-npm install
-npm start
-```
-The server will run on `http://localhost:5000`.
-
-### 2. Frontend Setup
-```bash
-cd client
-npm install
-npm run dev
-```
-Open `http://localhost:5173` in your browser.
+### Quick Start (One Command)
+1. **Install All Dependencies:**
+   ```bash
+   npm run setup
+   ```
+2. **Start NGMEE (Frontend + Backend):**
+   ```bash
+   npm start
+   ```
+   - Frontend: `http://localhost:5173`
+   - Backend: `http://localhost:5000`
 
 ## Project Structure
 ```

@@ -56,7 +56,7 @@ function App() {
             </h1>
           </div>
           <div className="text-xs uppercase tracking-[0.2em] text-gray-500 font-medium hidden sm:block">
-            Next Gen Media Extraction Engine
+            Next Gen Media Extraction Engine By Arvindra Rajput
           </div>
         </nav>
 
